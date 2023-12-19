@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.*;
 
-public class Main extends JPanel{
+public class imageMoving extends JPanel{
 	static BufferedImage img = null;
 	static int x = 0;
 	static int y = 0;
@@ -69,8 +69,6 @@ public class Main extends JPanel{
 	public static void main(String[] args) {
 
 		JFrame frame = getFrame();
-		JButton button = new JButton("click");
-		button.setVisible(false);
 		//JPanel panel = new JPanel();
 		JLabel imgIcon = new JLabel(new ImageIcon(getImg("donut").getScaledInstance(50,50,Image.SCALE_SMOOTH)));
 		imgIcon.setBounds(0,0,50,50);
