@@ -83,7 +83,7 @@ public class dvdMoving extends JComponent{
 
 	static void saveImage(BufferedImage image) {
 		try{
-			ImageIO.write(image,"png", new File("C:\\\\java\\\\copy\\\\imageInput\\\\src\\\\motion\\\\DVD\\\\images\\\\DVD2.png"));
+			ImageIO.write(image,"png", new File("C:\\java\\copy\\imageInput\\src\\motion\\DVD\\images\\DVD2.png"));
 		} catch(IOException ex) {
 			ex.printStackTrace();
 		}
