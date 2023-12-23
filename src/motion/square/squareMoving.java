@@ -23,7 +23,7 @@ public class squareMoving {
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension dimension = tk.getScreenSize();
 		j.setBounds((int) (dimension.getWidth() / 2 - 400),(int) dimension.getHeight() / 2 - 300, width, heigth);
-		j.setBackground(color);
+		j.getContentPane().setBackground(color);
 		return j;
 	}
 
@@ -42,12 +42,12 @@ public class squareMoving {
 
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		JFrame frame = getFrame("square moving", Color.black);
-		JPanel panel = new JPanel();
+		//JPanel panel = new JPanel();
 		JLabel donut = getImg("donut");
 		donut.setBounds(0,0,75,75);
 		donut.setLocation(0,0);
 		frame.getContentPane().setLayout(null);
-		panel.add(donut);
+		//panel.add(donut);
 		frame.add(donut);
 
 		ActionListener al = new ActionListener() {
