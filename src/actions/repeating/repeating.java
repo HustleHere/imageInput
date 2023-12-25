@@ -11,6 +11,6 @@ import static motion.cars.ImageOperations.*;
 public class repeating {
 	public static void main(String[] args) {
 
-		JFrame frame = ImageOperations.get("Grass", Color.white);
+		JFrame frame = getFrame("Grass", Color.white);
 	}
 }

@@ -10,7 +10,7 @@ import java.io.IOException;
 public class ImageOperations {
 	static int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
 	static int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-	static JFrame getFrame(String name, Color color) {
+	public static JFrame getFrame(String name, Color color) {
 		JFrame frame = new JFrame(name);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.getContentPane().setBackground(color);
