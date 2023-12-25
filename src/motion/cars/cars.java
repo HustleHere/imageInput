@@ -9,17 +9,6 @@ public class cars {
 	static int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
 	static int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
 
-	static JFrame getFrame(String name, Color color) {
-		JFrame frame = new JFrame(name);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		frame.getContentPane().setBackground(color);
-		frame.getContentPane().setLayout(null);
-		/*Toolkit tk = Toolkit.getDefaultToolkit();
-		Dimension dimension = tk.getScreenSize();*/
-		frame.setBounds(width / 2 - 640, height / 2 - 360, width / 2, height / 2);
-		return frame;
-	}
-
 	public static void main(String[] args) {
 
 		JFrame frame = getFrame("Racing", Color.black);
