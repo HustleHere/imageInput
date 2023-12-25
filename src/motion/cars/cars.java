@@ -23,28 +23,45 @@ public class cars {
 	public static void main(String[] args) {
 
 		JFrame frame = getFrame("Racing", Color.black);
+		JLabel timer = null;
 
 		Car green = new Car("green", false, 100, 100, 0, 0);
 		frame.getContentPane().add(green.getJLabel());
 		Thread greenM = new Thread(green, "Green");
-		greenM.start();
 
 		Car gray = new Car("gray", false, 100, 100, 0, 100);
 		frame.getContentPane().add(gray.getJLabel());
 		Thread grayM = new Thread(gray, "Gray");
-		grayM.start();
 
 		Car red = new Car("red", true, 100, 100, 0, 200);
 		frame.getContentPane().add(red.getJLabel());
 		Thread redM = new Thread(red, "Red");
-		redM.start();
 
 		Car white = new Car("white", true, 100, 100, 0, 300);
 		frame.getContentPane().add(white.getJLabel());
 		Thread whiteM = new Thread(white, "White");
-		whiteM.start();
 
 		frame.setVisible(true);
+
+		for(int i = 3; i > 0; i--) {
+			try {
+				timer = new JLabel(String.valueOf(i));
+				timer.setForeground(Color.white);
+				timer.setBounds(200, 150,100,100);
+				frame.getContentPane().add(timer);
+				frame.repaint();
+				Thread.sleep(1000);
+				frame.remove(timer);
+			} catch (InterruptedException ex) {}
+			finally {
+				frame.repaint();
+			}
+		}
+
+		greenM.start();
+		grayM.start();
+		redM.start();
+		whiteM.start();
 
 		Car[] cars = {green, gray, red, white};
 		boolean temp = false;
@@ -53,7 +70,7 @@ public class cars {
 			for (Car car : cars) {
 				if (car.isWin) {
 					JLabel text = new JLabel("The winner is " + car.name);
-					text.setBounds(width / 2 - 690, height / 2 - 460,500,100);
+					text.setBounds(width / 2 - 690, height / 2 - 460,200,100);
 					text.setForeground(Color.yellow);
 					frame.getContentPane().add(text);
 					temp = true;
